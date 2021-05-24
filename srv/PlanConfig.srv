@@ -1,0 +1,4 @@
+string configFile
+---
+int32[] lengths
+geometry_msgs/Pose2D[] poses

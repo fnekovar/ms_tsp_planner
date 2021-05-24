@@ -1,0 +1,7 @@
+graph_file: "nechranice_graph.yaml"
+uav_file: "f450.yaml"
+max_pylon_distance: 500 # max distance of pylons from landing station which are loaded for inspections
+max_flight_time: 3000 # max time of flight - the flight budget used in planning
+n_uavs: 3 # number of UAV routes returned
+grasp_iterations: 10 # number of GRASP runs, the best solution is returned
+

@@ -1,0 +1,6 @@
+#max_time: 1200 -- from main config atm
+v_insp: 1.0 # flight speed during inspection
+v_max: 5.0 
+a_max: 2.5
+yaw_max: 1.0
+
