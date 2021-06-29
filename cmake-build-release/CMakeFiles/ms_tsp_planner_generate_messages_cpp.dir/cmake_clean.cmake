@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ms_tsp_planner_generate_messages_cpp"
+  "devel/include/ms_tsp_planner/ConfigToFlightPlans.h"
   "devel/include/ms_tsp_planner/PlanConfig.h"
   "devel/include/ms_tsp_planner/PlanDefault.h"
 )

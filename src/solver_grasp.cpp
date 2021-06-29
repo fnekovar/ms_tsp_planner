@@ -12,7 +12,7 @@
         cout << w0 << " " << p1 << "" << p2;
 }
 
-    void Solver_Grasp::targets_from_segments(vector<vector<Vector2d>> lines) {
+    void Solver_Grasp::targets_from_segments(vector<vector<Vector3d>> lines) {
         int cost_index = 2;
         for (auto line : lines)
             for (auto i = 0u; i < line.size() - 1; i++) {

@@ -53,10 +53,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/151/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/152/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/151/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/152/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -74,21 +74,42 @@ include CMakeFiles/ms_tsp_planner_generate_messages_nodejs.dir/progress.make
 
 CMakeFiles/ms_tsp_planner_generate_messages_nodejs: devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanDefault.js
 CMakeFiles/ms_tsp_planner_generate_messages_nodejs: devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanConfig.js
+CMakeFiles/ms_tsp_planner_generate_messages_nodejs: devel/share/gennodejs/ros/ms_tsp_planner/srv/ConfigToFlightPlans.js
 
 
 devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanDefault.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanDefault.js: ../srv/PlanDefault.srv
-devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanDefault.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose2D.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanDefault.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanDefault.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanDefault.js: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanDefault.js: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanDefault.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nekovfra/git/ms_tsp_planner/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from ms_tsp_planner/PlanDefault.srv"
-	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/nekovfra/git/ms_tsp_planner/srv/PlanDefault.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p ms_tsp_planner -o /home/nekovfra/git/ms_tsp_planner/cmake-build-release/devel/share/gennodejs/ros/ms_tsp_planner/srv
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/nekovfra/git/ms_tsp_planner/srv/PlanDefault.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iaerialcore_msgs:/home/nekovfra/workspace/src/aerialcore_msgs/msg -p ms_tsp_planner -o /home/nekovfra/git/ms_tsp_planner/cmake-build-release/devel/share/gennodejs/ros/ms_tsp_planner/srv
 
 devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanConfig.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanConfig.js: ../srv/PlanConfig.srv
-devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanConfig.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose2D.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanConfig.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanConfig.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanConfig.js: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanConfig.js: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanConfig.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nekovfra/git/ms_tsp_planner/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from ms_tsp_planner/PlanConfig.srv"
-	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p ms_tsp_planner -o /home/nekovfra/git/ms_tsp_planner/cmake-build-release/devel/share/gennodejs/ros/ms_tsp_planner/srv
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iaerialcore_msgs:/home/nekovfra/workspace/src/aerialcore_msgs/msg -p ms_tsp_planner -o /home/nekovfra/git/ms_tsp_planner/cmake-build-release/devel/share/gennodejs/ros/ms_tsp_planner/srv
+
+devel/share/gennodejs/ros/ms_tsp_planner/srv/ConfigToFlightPlans.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+devel/share/gennodejs/ros/ms_tsp_planner/srv/ConfigToFlightPlans.js: ../srv/ConfigToFlightPlans.srv
+devel/share/gennodejs/ros/ms_tsp_planner/srv/ConfigToFlightPlans.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/ConfigToFlightPlans.js: /home/nekovfra/workspace/src/aerialcore_msgs/msg/FlightPlan.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/ConfigToFlightPlans.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/ConfigToFlightPlans.js: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/ConfigToFlightPlans.js: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+devel/share/gennodejs/ros/ms_tsp_planner/srv/ConfigToFlightPlans.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nekovfra/git/ms_tsp_planner/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from ms_tsp_planner/ConfigToFlightPlans.srv"
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/nekovfra/git/ms_tsp_planner/srv/ConfigToFlightPlans.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iaerialcore_msgs:/home/nekovfra/workspace/src/aerialcore_msgs/msg -p ms_tsp_planner -o /home/nekovfra/git/ms_tsp_planner/cmake-build-release/devel/share/gennodejs/ros/ms_tsp_planner/srv
 
 ms_tsp_planner_generate_messages_nodejs: CMakeFiles/ms_tsp_planner_generate_messages_nodejs
+ms_tsp_planner_generate_messages_nodejs: devel/share/gennodejs/ros/ms_tsp_planner/srv/ConfigToFlightPlans.js
 ms_tsp_planner_generate_messages_nodejs: devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanConfig.js
 ms_tsp_planner_generate_messages_nodejs: devel/share/gennodejs/ros/ms_tsp_planner/srv/PlanDefault.js
 ms_tsp_planner_generate_messages_nodejs: CMakeFiles/ms_tsp_planner_generate_messages_nodejs.dir/build.make

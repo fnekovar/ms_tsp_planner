@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ms_tsp_planner_generate_messages_py"
+  "devel/lib/python3/dist-packages/ms_tsp_planner/srv/_ConfigToFlightPlans.py"
   "devel/lib/python3/dist-packages/ms_tsp_planner/srv/_PlanConfig.py"
   "devel/lib/python3/dist-packages/ms_tsp_planner/srv/_PlanDefault.py"
   "devel/lib/python3/dist-packages/ms_tsp_planner/srv/__init__.py"

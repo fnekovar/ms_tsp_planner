@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::ms_tsp_planner::PlanConfig > {
   static const char* value()
   {
-    return "2e97fd6b127ae7b9986f060e8d2c6789";
+    return "77fb59d0aed20e6c9656adf256a62d78";
   }
 
   static const char* value(const ::ms_tsp_planner::PlanConfig&) { return value(); }

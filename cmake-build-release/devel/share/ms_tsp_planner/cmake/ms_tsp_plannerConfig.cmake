@@ -185,7 +185,7 @@ foreach(t ${ms_tsp_planner_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "roscpp;message_runtime;roslib;std_msgs;geometry_msgs")
+set(depends "roscpp;message_runtime;roslib;std_msgs;geometry_msgs;aerialcore_msgs")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

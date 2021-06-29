@@ -12,7 +12,7 @@ using namespace Eigen;
 
 class Uav_Agent {
 public:
-    Uav_Agent(double v_max, double v_inspection, double a_max, double j_max, double yaw_max, int max_t, Vector2d coord_0, vector<vector<Vector2d>> lines) : v_max(v_max), v_inspection(v_inspection), a_max(a_max), j_max(j_max), yaw_max(yaw_max), max_t(max_t) {
+    Uav_Agent(double v_max, double v_inspection, double a_max, double j_max, double yaw_max, int max_t, Vector3d coord_0, vector<vector<Vector3d>> lines) : v_max(v_max), v_inspection(v_inspection), a_max(a_max), j_max(j_max), yaw_max(yaw_max), max_t(max_t) {
         generate_cost_matrix_straightline(coord_0, lines);
     }
 
@@ -26,13 +26,13 @@ public:
     size_t graphSize;
 
 
-    double estimateTimeLines(const vector<Vector2d>& vertices) { // 4 vertices
-        Vector2d origin = vertices[1];
-        Vector2d start = vertices[2];
-        Vector2d end = vertices[3];
-        Vector2d vec0 = vertices[1] - vertices[0];
-        Vector2d vec1 = vertices[2] - vertices[1];
-        Vector2d vec2 = vertices[3] - vertices[2];
+    double estimateTimeLines(const vector<Vector3d>& vertices) { // 4 vertices
+        Vector3d origin = vertices[1];
+        Vector3d start = vertices[2];
+        Vector3d end = vertices[3];
+        Vector3d vec0 = vertices[1] - vertices[0];
+        Vector3d vec1 = vertices[2] - vertices[1];
+        Vector3d vec2 = vertices[3] - vertices[2];
         vec0.normalize();
         vec1.normalize();
         vec2.normalize();
@@ -56,11 +56,11 @@ public:
 //        return timeTraverse + timeInspection + 2*v_max/a_max + 2*v_inspection/a_max;
     }
 
-    double estimateTimeEnd(const vector<Vector2d>& vertices) {
-        Vector2d origin = vertices[1];
-        Vector2d depot = vertices[2];
-        Vector2d vec0 = vertices[1] - vertices[0];
-        Vector2d vec1 = vertices[2] - vertices[1];
+    double estimateTimeEnd(const vector<Vector3d>& vertices) {
+        Vector3d origin = vertices[1];
+        Vector3d depot = vertices[2];
+        Vector3d vec0 = vertices[1] - vertices[0];
+        Vector3d vec1 = vertices[2] - vertices[1];
         vec0.normalize();
         vec1.normalize();
         double angle1 = atan2(vec1[1], vec1[0]) - atan2(vec0[1], vec0[0]);
@@ -75,7 +75,7 @@ public:
 //        return timeTraverse + 2*v_max/a_max;
     }
 
-    void generate_cost_matrix_straightline(Vector2d coord_0, vector<vector<Vector2d>> lines) {
+    void generate_cost_matrix_straightline(Vector3d coord_0, vector<vector<Vector3d>> lines) {
         graphSize = 2 + lines.size()*2;
         cost_matrix = vector<vector<double>>(graphSize,vector<double>(graphSize));
         // fill non-traversable edges with, well ... anything, except float inf, that breaks cplex
@@ -91,8 +91,8 @@ public:
         cost_matrix[0][1] = inf;
         // edges ending at depot
         for (auto i = 0u; i < lines.size(); ++i) {
-            vector<Vector2d> vec01 {lines[i][1], lines[i][0], coord_0}; // B-A-0
-            vector<Vector2d> vec02 {lines[i][0], lines[i][1], coord_0}; // A-B-0
+            vector<Vector3d> vec01 {lines[i][1], lines[i][0], coord_0}; // B-A-0
+            vector<Vector3d> vec02 {lines[i][0], lines[i][1], coord_0}; // A-B-0
             auto dist01 = estimateTimeEnd(vec01);
             auto dist02 = estimateTimeEnd(vec02);
             cost_matrix[1][offset] = inf;
@@ -104,8 +104,8 @@ public:
         // edges starting at depot
         offset = 2u;
         for (auto i = 0u; i < lines.size(); ++i) {
-            vector<Vector2d> vec01 {Vector2d(-1,0), coord_0, lines[i][0], lines[i][1]}; // 0-A-B
-            vector<Vector2d> vec02 {Vector2d(-1,0), coord_0, lines[i][1], lines[i][0]}; // 0-B-A
+            vector<Vector3d> vec01 {Vector3d(-1,0, coord_0.z()), coord_0, lines[i][0], lines[i][1]}; // 0-A-B
+            vector<Vector3d> vec02 {Vector3d(-1,0, coord_0.z()), coord_0, lines[i][1], lines[i][0]}; // 0-B-A
             auto dist01 = estimateTimeLines(vec01);
             auto dist02 = estimateTimeLines(vec02);
             cost_matrix[0][offset] = dist01;
@@ -126,14 +126,14 @@ public:
             for(auto k = l+1; k < lines.size(); ++k){
                 off_y += (lines[k-1].size()-1)*2;
                 auto off_x = offset;
-                vector<Vector2d> vec1 {lines[l][0], lines[l][1], lines[k][0], lines[k][1]}; // 1234
-                vector<Vector2d> vec2 {lines[l][0], lines[l][1], lines[k][1], lines[k][0]}; // 1243
-                vector<Vector2d> vec3 {lines[l][1], lines[l][0], lines[k][0], lines[k][1]}; // 2134
-                vector<Vector2d> vec4 {lines[l][1], lines[l][0], lines[k][1], lines[k][0]}; // 2143
-                vector<Vector2d> vec5 {lines[k][0], lines[k][1], lines[l][0], lines[l][1]}; // 3412
-                vector<Vector2d> vec6 {lines[k][0], lines[k][1], lines[l][1], lines[l][0]}; // 3421
-                vector<Vector2d> vec7 {lines[k][1], lines[k][0], lines[l][0], lines[l][1]}; // 4312
-                vector<Vector2d> vec8 {lines[k][1], lines[k][0], lines[l][1], lines[l][0]}; // 4321
+                vector<Vector3d> vec1 {lines[l][0], lines[l][1], lines[k][0], lines[k][1]}; // 1234
+                vector<Vector3d> vec2 {lines[l][0], lines[l][1], lines[k][1], lines[k][0]}; // 1243
+                vector<Vector3d> vec3 {lines[l][1], lines[l][0], lines[k][0], lines[k][1]}; // 2134
+                vector<Vector3d> vec4 {lines[l][1], lines[l][0], lines[k][1], lines[k][0]}; // 2143
+                vector<Vector3d> vec5 {lines[k][0], lines[k][1], lines[l][0], lines[l][1]}; // 3412
+                vector<Vector3d> vec6 {lines[k][0], lines[k][1], lines[l][1], lines[l][0]}; // 3421
+                vector<Vector3d> vec7 {lines[k][1], lines[k][0], lines[l][0], lines[l][1]}; // 4312
+                vector<Vector3d> vec8 {lines[k][1], lines[k][0], lines[l][1], lines[l][0]}; // 4321
                 auto dist1 = estimateTimeLines(vec1);
                 auto dist2 = estimateTimeLines(vec2);
                 auto dist3 = estimateTimeLines(vec3);

@@ -104,18 +104,20 @@ void Mstsp::read_yaml_graph_data(std::string filepath) {
     string line;
     getline(depot_stream, line);
     stringstream line_stream(line);
-    double x, y;
+    double x, y, z;
     line_stream >> x;
     line_stream >> y;
-    depot_pos = Vector2d(x,y);
+    line_stream >> z;
+    depot_pos = Vector3d(x,y,z);
 
-    vector<Vector2d> pylons;
+    vector<Vector3d> pylons;
     stringstream pylons_stream(pylon_positions);
     while (getline(pylons_stream, line)) {
         line_stream = stringstream(line);
         line_stream >> x;
         line_stream >> y;
-        pylons.push_back(Vector2d(x, y));
+        line_stream >> z;
+        pylons.push_back(Vector3d(x, y, z));
     }
     auto n = pylons.size();
     vector<vector<bool>> connection_graph(n, vector<bool>(n, false));
@@ -135,7 +137,7 @@ void Mstsp::read_yaml_graph_data(std::string filepath) {
     for (i = 0u; i < n; i++) {
         for (auto j = i + 1; j < n; j++) {
             if (connection_graph[i][j]) {
-                vector<Vector2d> segment;
+                vector<Vector3d> segment;
                 segment.push_back(pylons.at(i));
                 segment.push_back(pylons.at(j));
                 if((pylons.at(i)-depot_pos).norm() < max_pylon_distance and (pylons.at(j)-depot_pos).norm() < max_pylon_distance) {
@@ -156,8 +158,8 @@ void Mstsp::write_csv(string filename, Solution sol){
         myFile << std::endl;
         for(auto i = 1u; i < route.size()-1; i++) {
             auto segment_id = route[i];
-            Vector2d pylon0 = segments.at((segment_id/2)-1 ).at(0);
-            Vector2d pylon1 = segments.at((segment_id/2)-1 ).at(1);
+            Vector3d pylon0 = segments.at((segment_id/2)-1 ).at(0);
+            Vector3d pylon1 = segments.at((segment_id/2)-1 ).at(1);
             if(segment_id % 2) {
                 myFile << pylon1.x() << " " << pylon1.y() << ", ";
                 myFile << pylon0.x() << " " << pylon0.y() << ", ";
@@ -170,34 +172,96 @@ void Mstsp::write_csv(string filename, Solution sol){
     myFile.close();
 }
 
-vector<vector<geometry_msgs::Pose2D>> Mstsp::solution_to_poses(Solution sol){
-    vector<vector<geometry_msgs::Pose2D>> poses;
+//vector<vector<geometry_msgs::Pose3D>> Mstsp::solution_to_poses_stamped(Solution sol){
+//    vector<vector<geometry_msgs::Pose3D>> poses;
+//
+//    for(auto route : sol.routes)
+//    {
+//        vector<geometry_msgs::PoseStamped> poseline;
+//        for(auto i = 1u; i < route.size()-1; i++) {
+//            auto segment_id = route[i];
+//            Vector3d pylon0 = segments.at((segment_id/2)-1 ).at(0);
+//            Vector3d pylon1 = segments.at((segment_id/2)-1 ).at(1);
+//            geometry_msgs::PoseStamped pose_a;
+//            geometry_msgs::PoseStamped pose_b;
+//            if(segment_id % 2) {
+//                pose_a.pose.position.x = pylon1.x();
+//                pose_a.pose.position.y = pylon1.y();
+//                pose_a.pose.position.z = pylon1.z();
+//                pose_b.pose.position.x = pylon0.x();
+//                pose_b.pose.position.y = pylon0.y();
+//            } else {
+//                pose_a.x = pylon0.x();
+//                pose_a.y = pylon0.y();
+//                pose_b.x = pylon1.x();
+//                pose_b.y = pylon1.y();
+//            }
+//            poseline.push_back(pose_a);
+//            poseline.push_back(pose_b);
+//        }
+//        poses.push_back(poseline);
+//    }
+//    return poses;
+//}
 
+std::vector<aerialcore_msgs::FlightPlan> Mstsp::solution_to_flight_plans(Solution sol) {
+    std::vector<aerialcore_msgs::FlightPlan> plans_;
     for(auto route : sol.routes)
     {
-        vector<geometry_msgs::Pose2D> poseline;
+        aerialcore_msgs::FlightPlan plan_;
+
+        { // depot 0
+            geometry_msgs::PoseStamped depot_;
+            depot_.pose.position.x = depot_pos.x();
+            depot_.pose.position.y = depot_pos.y();
+            depot_.pose.position.z = depot_pos.z();
+            plan_.poses.push_back(depot_);
+            plan_.type.push_back(0);
+        }
+
         for(auto i = 1u; i < route.size()-1; i++) {
             auto segment_id = route[i];
-            Vector2d pylon0 = segments.at((segment_id/2)-1 ).at(0);
-            Vector2d pylon1 = segments.at((segment_id/2)-1 ).at(1);
-            geometry_msgs::Pose2D pose_a;
-            geometry_msgs::Pose2D pose_b;
+            Vector3d pylon0 = segments.at((segment_id/2)-1 ).at(0);
+            Vector3d pylon1 = segments.at((segment_id/2)-1 ).at(1);
+            geometry_msgs::PoseStamped pose_a;
+            geometry_msgs::PoseStamped pose_b;
             if(segment_id % 2) {
-                pose_a.x = pylon1.x();
-                pose_a.y = pylon1.y();
-                pose_b.x = pylon0.x();
-                pose_b.y = pylon0.y();
+                pose_a.pose.position.x = pylon1.x();
+                pose_a.pose.position.y = pylon1.y();
+                pose_a.pose.position.z = pylon1.z();
+                pose_b.pose.position.x = pylon0.x();
+                pose_b.pose.position.y = pylon0.y();
+                pose_b.pose.position.z = pylon0.z();
+                plan_.nodes.push_back(segment_id/2);
+                plan_.nodes.push_back(segment_id/2-1);
             } else {
-                pose_a.x = pylon0.x();
-                pose_a.y = pylon0.y();
-                pose_b.x = pylon1.x();
-                pose_b.y = pylon1.y();
+                pose_a.pose.position.x = pylon0.x();
+                pose_a.pose.position.y = pylon0.y();
+                pose_a.pose.position.z = pylon0.z();
+                pose_b.pose.position.x = pylon1.x();
+                pose_b.pose.position.y = pylon1.y();
+                pose_b.pose.position.z = pylon1.z();
+                plan_.nodes.push_back(segment_id/2-1);
+                plan_.nodes.push_back(segment_id/2);
             }
-            poseline.push_back(pose_a);
-            poseline.push_back(pose_b);
+            plan_.poses.push_back(pose_a);
+            plan_.poses.push_back(pose_b);
+            plan_.type.push_back(1);
+            plan_.type.push_back(1);
         }
-        poses.push_back(poseline);
+
+        { // depot 1
+            geometry_msgs::PoseStamped depot_;
+            depot_.pose.position.x = depot_pos.x();
+            depot_.pose.position.y = depot_pos.y();
+            depot_.pose.position.z = depot_pos.z();
+            plan_.poses.push_back(depot_);
+            plan_.type.push_back(3);
+        }
+
+        plans_.push_back(plan_);
+
     }
-    return poses;
+    return plans_;
 }
 

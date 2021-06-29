@@ -37,14 +37,14 @@
 
     public:
         Solver_Grasp() {}
-        Solver_Grasp(const UavVector agents, const vector<vector<Vector2d>> segments)
+        Solver_Grasp(const UavVector agents, const vector<vector<Vector3d>> segments)
                 : agents{agents} {
             targets_from_segments(segments);
         }
         TargetSetVectorVector greedy_random();
         Solution solve();
         void set_config(double w0, double p1, double p2, int R_T);
-        void targets_from_segments(vector<vector<Vector2d>> segments);
+        void targets_from_segments(vector<vector<Vector3d>> segments);
 private:
         TargetSetVectorVector getTSSolution(TargetSetVectorVector& prevSol);
         void getG1Solution(TargetSetVectorVector& prevSol);

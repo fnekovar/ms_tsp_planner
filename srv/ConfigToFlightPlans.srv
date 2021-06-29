@@ -1,0 +1,3 @@
+string configFile
+---
+aerialcore_msgs/FlightPlan[] plans

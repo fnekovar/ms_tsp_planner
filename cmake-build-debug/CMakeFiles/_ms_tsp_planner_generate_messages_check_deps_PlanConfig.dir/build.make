@@ -53,10 +53,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/151/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/152/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/151/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/152/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -73,7 +73,7 @@ CMAKE_BINARY_DIR = /home/nekovfra/git/ms_tsp_planner/cmake-build-debug
 include CMakeFiles/_ms_tsp_planner_generate_messages_check_deps_PlanConfig.dir/progress.make
 
 CMakeFiles/_ms_tsp_planner_generate_messages_check_deps_PlanConfig:
-	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py ms_tsp_planner /home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv geometry_msgs/Pose2D
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py ms_tsp_planner /home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv geometry_msgs/Pose:geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/PoseStamped:geometry_msgs/Point
 
 _ms_tsp_planner_generate_messages_check_deps_PlanConfig: CMakeFiles/_ms_tsp_planner_generate_messages_check_deps_PlanConfig
 _ms_tsp_planner_generate_messages_check_deps_PlanConfig: CMakeFiles/_ms_tsp_planner_generate_messages_check_deps_PlanConfig.dir/build.make

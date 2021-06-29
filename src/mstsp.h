@@ -13,7 +13,9 @@
 #include <ros/ros.h>
 #include <ros/package.h>
 #include <libconfig.h++>
-#include <geometry_msgs/Pose2D.h>
+#include <geometry_msgs/PoseStamped.h>
+#include "aerialcore_msgs/FlightPlan.h"
+
 
 using namespace std;
 using namespace Eigen;
@@ -31,8 +33,8 @@ private:
     double v_insp_global;
     double a_max_global;
     double yaw_max_global;
-    Vector2d depot_pos;
-    std::vector<std::vector<Vector2d>> segments;
+    Vector3d depot_pos;
+    std::vector<std::vector<Vector3d>> segments;
     Solution solution;
 public:
     Mstsp() {}
@@ -42,7 +44,9 @@ public:
     void read_yaml_uav_data(std::string filepath);
     void read_yaml_grasp_data(std::string filepath);
     void write_csv(string filename, Solution sol);
-    vector<vector<geometry_msgs::Pose2D>> solution_to_poses(Solution sol);
+//    vector<vector<geometry_msgs::PoseStamped>> solution_to_poses_stamped(Solution sol);
+    std::vector<aerialcore_msgs::FlightPlan> solution_to_flight_plans(Solution sol);
+
 
     Solution execute();
 };

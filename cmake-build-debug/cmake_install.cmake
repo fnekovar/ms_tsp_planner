@@ -137,6 +137,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ms_tsp_planner/srv" TYPE FILE FILES
     "/home/nekovfra/git/ms_tsp_planner/srv/PlanDefault.srv"
     "/home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv"
+    "/home/nekovfra/git/ms_tsp_planner/srv/ConfigToFlightPlans.srv"
     )
 endif()
 

@@ -58,10 +58,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/151/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/152/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/151/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/152/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,31 +78,31 @@ CMAKE_BINARY_DIR = /home/nekovfra/git/ms_tsp_planner/cmake-build-debug
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/snap/clion/151/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/snap/clion/152/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/snap/clion/151/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/snap/clion/152/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/151/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/snap/clion/152/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/151/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/snap/clion/152/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/151/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/152/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -113,7 +113,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/151/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/152/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -124,13 +124,13 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/151/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+	/snap/clion/152/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/151/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+	/snap/clion/152/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target list_install_components
@@ -146,7 +146,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/snap/clion/151/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
+	/snap/clion/152/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
 .PHONY : test
 
 # Special rule for the target test
@@ -185,19 +185,6 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named mstsp
-
-# Build rule for target.
-mstsp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mstsp
-.PHONY : mstsp
-
-# fast build rule for target.
-mstsp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mstsp.dir/build.make CMakeFiles/mstsp.dir/build
-.PHONY : mstsp/fast
 
 #=============================================================================
 # Target rules for targets named ms_tsp_planner_gennodejs
@@ -265,6 +252,32 @@ ms_tsp_planner_generate_messages_eus/fast:
 .PHONY : ms_tsp_planner_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named ms_tsp_planner_generate_messages_cpp
+
+# Build rule for target.
+ms_tsp_planner_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ms_tsp_planner_generate_messages_cpp
+.PHONY : ms_tsp_planner_generate_messages_cpp
+
+# fast build rule for target.
+ms_tsp_planner_generate_messages_cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ms_tsp_planner_generate_messages_cpp.dir/build.make CMakeFiles/ms_tsp_planner_generate_messages_cpp.dir/build
+.PHONY : ms_tsp_planner_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named _ms_tsp_planner_generate_messages_check_deps_ConfigToFlightPlans
+
+# Build rule for target.
+_ms_tsp_planner_generate_messages_check_deps_ConfigToFlightPlans: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _ms_tsp_planner_generate_messages_check_deps_ConfigToFlightPlans
+.PHONY : _ms_tsp_planner_generate_messages_check_deps_ConfigToFlightPlans
+
+# fast build rule for target.
+_ms_tsp_planner_generate_messages_check_deps_ConfigToFlightPlans/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_ms_tsp_planner_generate_messages_check_deps_ConfigToFlightPlans.dir/build.make CMakeFiles/_ms_tsp_planner_generate_messages_check_deps_ConfigToFlightPlans.dir/build
+.PHONY : _ms_tsp_planner_generate_messages_check_deps_ConfigToFlightPlans/fast
+
+#=============================================================================
 # Target rules for targets named ms_tsp_planner_gencpp
 
 # Build rule for target.
@@ -278,17 +291,69 @@ ms_tsp_planner_gencpp/fast:
 .PHONY : ms_tsp_planner_gencpp/fast
 
 #=============================================================================
-# Target rules for targets named ms_tsp_planner_generate_messages_cpp
+# Target rules for targets named aerialcore_msgs_generate_messages_py
 
 # Build rule for target.
-ms_tsp_planner_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ms_tsp_planner_generate_messages_cpp
-.PHONY : ms_tsp_planner_generate_messages_cpp
+aerialcore_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 aerialcore_msgs_generate_messages_py
+.PHONY : aerialcore_msgs_generate_messages_py
 
 # fast build rule for target.
-ms_tsp_planner_generate_messages_cpp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ms_tsp_planner_generate_messages_cpp.dir/build.make CMakeFiles/ms_tsp_planner_generate_messages_cpp.dir/build
-.PHONY : ms_tsp_planner_generate_messages_cpp/fast
+aerialcore_msgs_generate_messages_py/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aerialcore_msgs_generate_messages_py.dir/build.make CMakeFiles/aerialcore_msgs_generate_messages_py.dir/build
+.PHONY : aerialcore_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named mstsp
+
+# Build rule for target.
+mstsp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mstsp
+.PHONY : mstsp
+
+# fast build rule for target.
+mstsp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mstsp.dir/build.make CMakeFiles/mstsp.dir/build
+.PHONY : mstsp/fast
+
+#=============================================================================
+# Target rules for targets named aerialcore_msgs_generate_messages_eus
+
+# Build rule for target.
+aerialcore_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 aerialcore_msgs_generate_messages_eus
+.PHONY : aerialcore_msgs_generate_messages_eus
+
+# fast build rule for target.
+aerialcore_msgs_generate_messages_eus/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aerialcore_msgs_generate_messages_eus.dir/build.make CMakeFiles/aerialcore_msgs_generate_messages_eus.dir/build
+.PHONY : aerialcore_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named aerialcore_msgs_generate_messages_lisp
+
+# Build rule for target.
+aerialcore_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 aerialcore_msgs_generate_messages_lisp
+.PHONY : aerialcore_msgs_generate_messages_lisp
+
+# fast build rule for target.
+aerialcore_msgs_generate_messages_lisp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aerialcore_msgs_generate_messages_lisp.dir/build.make CMakeFiles/aerialcore_msgs_generate_messages_lisp.dir/build
+.PHONY : aerialcore_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named aerialcore_msgs_generate_messages_cpp
+
+# Build rule for target.
+aerialcore_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 aerialcore_msgs_generate_messages_cpp
+.PHONY : aerialcore_msgs_generate_messages_cpp
+
+# fast build rule for target.
+aerialcore_msgs_generate_messages_cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aerialcore_msgs_generate_messages_cpp.dir/build.make CMakeFiles/aerialcore_msgs_generate_messages_cpp.dir/build
+.PHONY : aerialcore_msgs_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_nodejs
@@ -549,6 +614,19 @@ doxygen: cmake_check_build_system
 doxygen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
 .PHONY : doxygen/fast
+
+#=============================================================================
+# Target rules for targets named aerialcore_msgs_generate_messages_nodejs
+
+# Build rule for target.
+aerialcore_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 aerialcore_msgs_generate_messages_nodejs
+.PHONY : aerialcore_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+aerialcore_msgs_generate_messages_nodejs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aerialcore_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/aerialcore_msgs_generate_messages_nodejs.dir/build
+.PHONY : aerialcore_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_lisp
@@ -1164,6 +1242,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... _ms_tsp_planner_generate_messages_check_deps_ConfigToFlightPlans"
 	@echo "... _ms_tsp_planner_generate_messages_check_deps_PlanConfig"
 	@echo "... _ms_tsp_planner_generate_messages_check_deps_PlanDefault"
 	@echo "... actionlib_generate_messages_cpp"
@@ -1176,6 +1255,11 @@ help:
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... aerialcore_msgs_generate_messages_cpp"
+	@echo "... aerialcore_msgs_generate_messages_eus"
+	@echo "... aerialcore_msgs_generate_messages_lisp"
+	@echo "... aerialcore_msgs_generate_messages_nodejs"
+	@echo "... aerialcore_msgs_generate_messages_py"
 	@echo "... clean_test_results"
 	@echo "... download_extra_data"
 	@echo "... doxygen"

@@ -1,8 +1,8 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "ms_tsp_planner: 0 messages, 2 services")
+message(STATUS "ms_tsp_planner: 0 messages, 3 services")
 
-set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg;-Iaerialcore_msgs:/home/nekovfra/workspace/src/aerialcore_msgs/msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -19,12 +19,17 @@ add_custom_target(ms_tsp_planner_generate_messages ALL)
 
 get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/PlanDefault.srv" NAME_WE)
 add_custom_target(_ms_tsp_planner_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ms_tsp_planner" "/home/nekovfra/git/ms_tsp_planner/srv/PlanDefault.srv" "geometry_msgs/Pose2D"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ms_tsp_planner" "/home/nekovfra/git/ms_tsp_planner/srv/PlanDefault.srv" "geometry_msgs/Pose:geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/PoseStamped:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv" NAME_WE)
 add_custom_target(_ms_tsp_planner_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ms_tsp_planner" "/home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv" "geometry_msgs/Pose2D"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ms_tsp_planner" "/home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv" "geometry_msgs/Pose:geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/PoseStamped:geometry_msgs/Point"
+)
+
+get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/ConfigToFlightPlans.srv" NAME_WE)
+add_custom_target(_ms_tsp_planner_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ms_tsp_planner" "/home/nekovfra/git/ms_tsp_planner/srv/ConfigToFlightPlans.srv" "geometry_msgs/Pose:geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/PoseStamped:geometry_msgs/Point:aerialcore_msgs/FlightPlan"
 )
 
 #
@@ -38,13 +43,19 @@ add_custom_target(_ms_tsp_planner_generate_messages_check_deps_${_filename}
 _generate_srv_cpp(ms_tsp_planner
   "/home/nekovfra/git/ms_tsp_planner/srv/PlanDefault.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose2D.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ms_tsp_planner
 )
 _generate_srv_cpp(ms_tsp_planner
   "/home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose2D.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ms_tsp_planner
+)
+_generate_srv_cpp(ms_tsp_planner
+  "/home/nekovfra/git/ms_tsp_planner/srv/ConfigToFlightPlans.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/nekovfra/workspace/src/aerialcore_msgs/msg/FlightPlan.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ms_tsp_planner
 )
 
@@ -64,6 +75,8 @@ get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/PlanDefa
 add_dependencies(ms_tsp_planner_generate_messages_cpp _ms_tsp_planner_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv" NAME_WE)
 add_dependencies(ms_tsp_planner_generate_messages_cpp _ms_tsp_planner_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/ConfigToFlightPlans.srv" NAME_WE)
+add_dependencies(ms_tsp_planner_generate_messages_cpp _ms_tsp_planner_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(ms_tsp_planner_gencpp)
@@ -79,13 +92,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ms_tsp_planner_generate_messages_cp
 _generate_srv_eus(ms_tsp_planner
   "/home/nekovfra/git/ms_tsp_planner/srv/PlanDefault.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose2D.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ms_tsp_planner
 )
 _generate_srv_eus(ms_tsp_planner
   "/home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose2D.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ms_tsp_planner
+)
+_generate_srv_eus(ms_tsp_planner
+  "/home/nekovfra/git/ms_tsp_planner/srv/ConfigToFlightPlans.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/nekovfra/workspace/src/aerialcore_msgs/msg/FlightPlan.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ms_tsp_planner
 )
 
@@ -105,6 +124,8 @@ get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/PlanDefa
 add_dependencies(ms_tsp_planner_generate_messages_eus _ms_tsp_planner_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv" NAME_WE)
 add_dependencies(ms_tsp_planner_generate_messages_eus _ms_tsp_planner_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/ConfigToFlightPlans.srv" NAME_WE)
+add_dependencies(ms_tsp_planner_generate_messages_eus _ms_tsp_planner_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(ms_tsp_planner_geneus)
@@ -120,13 +141,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ms_tsp_planner_generate_messages_eu
 _generate_srv_lisp(ms_tsp_planner
   "/home/nekovfra/git/ms_tsp_planner/srv/PlanDefault.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose2D.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ms_tsp_planner
 )
 _generate_srv_lisp(ms_tsp_planner
   "/home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose2D.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ms_tsp_planner
+)
+_generate_srv_lisp(ms_tsp_planner
+  "/home/nekovfra/git/ms_tsp_planner/srv/ConfigToFlightPlans.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/nekovfra/workspace/src/aerialcore_msgs/msg/FlightPlan.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ms_tsp_planner
 )
 
@@ -146,6 +173,8 @@ get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/PlanDefa
 add_dependencies(ms_tsp_planner_generate_messages_lisp _ms_tsp_planner_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv" NAME_WE)
 add_dependencies(ms_tsp_planner_generate_messages_lisp _ms_tsp_planner_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/ConfigToFlightPlans.srv" NAME_WE)
+add_dependencies(ms_tsp_planner_generate_messages_lisp _ms_tsp_planner_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(ms_tsp_planner_genlisp)
@@ -161,13 +190,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ms_tsp_planner_generate_messages_li
 _generate_srv_nodejs(ms_tsp_planner
   "/home/nekovfra/git/ms_tsp_planner/srv/PlanDefault.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose2D.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ms_tsp_planner
 )
 _generate_srv_nodejs(ms_tsp_planner
   "/home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose2D.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ms_tsp_planner
+)
+_generate_srv_nodejs(ms_tsp_planner
+  "/home/nekovfra/git/ms_tsp_planner/srv/ConfigToFlightPlans.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/nekovfra/workspace/src/aerialcore_msgs/msg/FlightPlan.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ms_tsp_planner
 )
 
@@ -187,6 +222,8 @@ get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/PlanDefa
 add_dependencies(ms_tsp_planner_generate_messages_nodejs _ms_tsp_planner_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv" NAME_WE)
 add_dependencies(ms_tsp_planner_generate_messages_nodejs _ms_tsp_planner_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/ConfigToFlightPlans.srv" NAME_WE)
+add_dependencies(ms_tsp_planner_generate_messages_nodejs _ms_tsp_planner_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(ms_tsp_planner_gennodejs)
@@ -202,13 +239,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ms_tsp_planner_generate_messages_no
 _generate_srv_py(ms_tsp_planner
   "/home/nekovfra/git/ms_tsp_planner/srv/PlanDefault.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose2D.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ms_tsp_planner
 )
 _generate_srv_py(ms_tsp_planner
   "/home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose2D.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ms_tsp_planner
+)
+_generate_srv_py(ms_tsp_planner
+  "/home/nekovfra/git/ms_tsp_planner/srv/ConfigToFlightPlans.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/nekovfra/workspace/src/aerialcore_msgs/msg/FlightPlan.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ms_tsp_planner
 )
 
@@ -227,6 +270,8 @@ add_dependencies(ms_tsp_planner_generate_messages ms_tsp_planner_generate_messag
 get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/PlanDefault.srv" NAME_WE)
 add_dependencies(ms_tsp_planner_generate_messages_py _ms_tsp_planner_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/PlanConfig.srv" NAME_WE)
+add_dependencies(ms_tsp_planner_generate_messages_py _ms_tsp_planner_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nekovfra/git/ms_tsp_planner/srv/ConfigToFlightPlans.srv" NAME_WE)
 add_dependencies(ms_tsp_planner_generate_messages_py _ms_tsp_planner_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -251,6 +296,9 @@ endif()
 if(TARGET geometry_msgs_generate_messages_cpp)
   add_dependencies(ms_tsp_planner_generate_messages_cpp geometry_msgs_generate_messages_cpp)
 endif()
+if(TARGET aerialcore_msgs_generate_messages_cpp)
+  add_dependencies(ms_tsp_planner_generate_messages_cpp aerialcore_msgs_generate_messages_cpp)
+endif()
 
 if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ms_tsp_planner)
   # install generated code
@@ -264,6 +312,9 @@ if(TARGET std_msgs_generate_messages_eus)
 endif()
 if(TARGET geometry_msgs_generate_messages_eus)
   add_dependencies(ms_tsp_planner_generate_messages_eus geometry_msgs_generate_messages_eus)
+endif()
+if(TARGET aerialcore_msgs_generate_messages_eus)
+  add_dependencies(ms_tsp_planner_generate_messages_eus aerialcore_msgs_generate_messages_eus)
 endif()
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ms_tsp_planner)
@@ -279,6 +330,9 @@ endif()
 if(TARGET geometry_msgs_generate_messages_lisp)
   add_dependencies(ms_tsp_planner_generate_messages_lisp geometry_msgs_generate_messages_lisp)
 endif()
+if(TARGET aerialcore_msgs_generate_messages_lisp)
+  add_dependencies(ms_tsp_planner_generate_messages_lisp aerialcore_msgs_generate_messages_lisp)
+endif()
 
 if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ms_tsp_planner)
   # install generated code
@@ -292,6 +346,9 @@ if(TARGET std_msgs_generate_messages_nodejs)
 endif()
 if(TARGET geometry_msgs_generate_messages_nodejs)
   add_dependencies(ms_tsp_planner_generate_messages_nodejs geometry_msgs_generate_messages_nodejs)
+endif()
+if(TARGET aerialcore_msgs_generate_messages_nodejs)
+  add_dependencies(ms_tsp_planner_generate_messages_nodejs aerialcore_msgs_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ms_tsp_planner)
@@ -307,4 +364,7 @@ if(TARGET std_msgs_generate_messages_py)
 endif()
 if(TARGET geometry_msgs_generate_messages_py)
   add_dependencies(ms_tsp_planner_generate_messages_py geometry_msgs_generate_messages_py)
+endif()
+if(TARGET aerialcore_msgs_generate_messages_py)
+  add_dependencies(ms_tsp_planner_generate_messages_py aerialcore_msgs_generate_messages_py)
 endif()

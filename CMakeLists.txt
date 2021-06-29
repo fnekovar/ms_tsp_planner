@@ -27,6 +27,7 @@ find_package(catkin REQUIRED COMPONENTS
         geometry_msgs
         std_msgs
         message_generation
+        aerialcore_msgs
         )
 
 include_directories(PUBLIC include)
@@ -48,10 +49,20 @@ set(SOURCE_FILES
         src/mstsp.h)
 
 add_service_files(FILES
-  PlanDefault.srv
-  PlanConfig.srv)
-generate_messages(DEPENDENCIES std_msgs geometry_msgs)
-catkin_package(CATKIN_DEPENDS roscpp message_runtime roslib std_msgs geometry_msgs DEPENDS Eigen)
+        PlanDefault.srv
+        PlanConfig.srv
+        ConfigToFlightPlans.srv
+        )
+generate_messages(DEPENDENCIES std_msgs geometry_msgs aerialcore_msgs)
+catkin_package(CATKIN_DEPENDS
+        roscpp
+        message_runtime
+        roslib
+        std_msgs
+        geometry_msgs
+        aerialcore_msgs
+        DEPENDS
+        Eigen)
 
 add_executable(mstsp
         ${SOURCE_FILES})

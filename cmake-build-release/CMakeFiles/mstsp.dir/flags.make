@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"ms_tsp_planner\"
 
-CXX_INCLUDES = -I/home/nekovfra/git/ms_tsp_planner/cmake-build-release/devel/include -I/home/nekovfra/git/ms_tsp_planner/PUBLIC -I/home/nekovfra/git/ms_tsp_planner/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3
+CXX_INCLUDES = -I/home/nekovfra/git/ms_tsp_planner/cmake-build-release/devel/include -I/home/nekovfra/git/ms_tsp_planner/PUBLIC -I/home/nekovfra/git/ms_tsp_planner/include -I/home/nekovfra/workspace/devel/.private/aerialcore_msgs/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3
 
 CXX_FLAGS =  -std=c++17 -DIL_STD -m64 -Werror -O3 -DNDEBUG -DNDEBUG -O3 -flto -std=gnu++17
 

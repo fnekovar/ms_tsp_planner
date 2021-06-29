@@ -5,7 +5,7 @@
 		<Option title="ms_tsp_planner"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\src\;CMake Files\..\..\..\..\usr\src\googletest\;CMake Files\..\..\..\..\usr\src\googletest\googlemock\;CMake Files\..\..\..\..\usr\src\googletest\googlemock\cmake\;CMake Files\..\..\..\..\usr\src\googletest\googletest\;CMake Files\..\..\..\..\usr\src\googletest\googletest\cmake\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\usr\lib\cmake\eigen3\;CMake Files\..\..\..\..\opt\;CMake Files\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\opt\ros\noetic\;CMake Files\..\..\..\..\opt\ros\noetic\share\;CMake Files\..\..\..\..\opt\ros\noetic\share\catkin\;CMake Files\..\..\..\..\opt\ros\noetic\share\catkin\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\opt\ros\noetic\share\catkin\cmake\test\;CMake Files\..\..\..\..\opt\ros\noetic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\opt\ros\noetic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\opt\ros\noetic\share\catkin\cmake\em\;CMake Files\..\..\..\..\opt\ros\noetic\share\roscpp\;CMake Files\..\..\..\..\opt\ros\noetic\share\roscpp\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\cpp_common\;CMake Files\..\..\..\..\opt\ros\noetic\share\cpp_common\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\message_runtime\;CMake Files\..\..\..\..\opt\ros\noetic\share\message_runtime\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\;CMake Files\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\roscpp_traits\;CMake Files\..\..\..\..\opt\ros\noetic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\rostime\;CMake Files\..\..\..\..\opt\ros\noetic\share\rostime\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\rosconsole\;CMake Files\..\..\..\..\opt\ros\noetic\share\rosconsole\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\;CMake Files\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\std_msgs\;CMake Files\..\..\..\..\opt\ros\noetic\share\std_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\;CMake Files\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\rospy\;CMake Files\..\..\..\..\opt\ros\noetic\share\rospy\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\geometry_msgs\;CMake Files\..\..\..\..\opt\ros\noetic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\message_filters\;CMake Files\..\..\..\..\opt\ros\noetic\share\message_filters\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\sensor_msgs\;CMake Files\..\..\..\..\opt\ros\noetic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2_ros\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2_ros\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\actionlib\;CMake Files\..\..\..\..\opt\ros\noetic\share\actionlib\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\actionlib_msgs\;CMake Files\..\..\..\..\opt\ros\noetic\share\actionlib_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\genmsg\;CMake Files\..\..\..\..\opt\ros\noetic\share\genmsg\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\gencpp\;CMake Files\..\..\..\..\opt\ros\noetic\share\gencpp\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\geneus\;CMake Files\..\..\..\..\opt\ros\noetic\share\geneus\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\genlisp\;CMake Files\..\..\..\..\opt\ros\noetic\share\genlisp\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\gennodejs\;CMake Files\..\..\..\..\opt\ros\noetic\share\gennodejs\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\genpy\;CMake Files\..\..\..\..\opt\ros\noetic\share\genpy\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\rosgraph\;CMake Files\..\..\..\..\opt\ros\noetic\share\rosgraph\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2_msgs\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\message_generation\;CMake Files\..\..\..\..\opt\ros\noetic\share\message_generation\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2_py\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2_py\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\roslaunch\;CMake Files\..\..\..\..\opt\ros\noetic\share\roslaunch\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\roslib\;CMake Files\..\..\..\..\opt\ros\noetic\share\roslib\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\rospack\;CMake Files\..\..\..\..\opt\ros\noetic\share\rospack\cmake\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\catkin\;CMake Files\cmake-build-debug\catkin\catkin_generated\;CMake Files\cmake-build-debug\catkin\catkin_generated\version\;CMake Files\cmake-build-debug\catkin_generated\;CMake Files\cmake-build-debug\catkin_generated\installspace\;CMake Files\cmake-build-debug\devel\;CMake Files\cmake-build-debug\devel\share\;CMake Files\cmake-build-debug\devel\share\ms_tsp_planner\;CMake Files\cmake-build-debug\devel\share\ms_tsp_planner\cmake\;CMake Files\cmake-build-debug\cmake\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\src\;CMake Files\..\..\..\..\usr\src\googletest\;CMake Files\..\..\..\..\usr\src\googletest\googlemock\;CMake Files\..\..\..\..\usr\src\googletest\googlemock\cmake\;CMake Files\..\..\..\..\usr\src\googletest\googletest\;CMake Files\..\..\..\..\usr\src\googletest\googletest\cmake\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\usr\lib\cmake\eigen3\;CMake Files\..\..\..\..\opt\;CMake Files\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\opt\ros\noetic\;CMake Files\..\..\..\..\opt\ros\noetic\share\;CMake Files\..\..\..\..\opt\ros\noetic\share\catkin\;CMake Files\..\..\..\..\opt\ros\noetic\share\catkin\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\opt\ros\noetic\share\catkin\cmake\test\;CMake Files\..\..\..\..\opt\ros\noetic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\opt\ros\noetic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\opt\ros\noetic\share\catkin\cmake\em\;CMake Files\..\..\..\..\opt\ros\noetic\share\roscpp\;CMake Files\..\..\..\..\opt\ros\noetic\share\roscpp\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\cpp_common\;CMake Files\..\..\..\..\opt\ros\noetic\share\cpp_common\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\message_runtime\;CMake Files\..\..\..\..\opt\ros\noetic\share\message_runtime\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\;CMake Files\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\roscpp_traits\;CMake Files\..\..\..\..\opt\ros\noetic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\rostime\;CMake Files\..\..\..\..\opt\ros\noetic\share\rostime\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\rosconsole\;CMake Files\..\..\..\..\opt\ros\noetic\share\rosconsole\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\;CMake Files\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\std_msgs\;CMake Files\..\..\..\..\opt\ros\noetic\share\std_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\;CMake Files\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\rospy\;CMake Files\..\..\..\..\opt\ros\noetic\share\rospy\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\geometry_msgs\;CMake Files\..\..\..\..\opt\ros\noetic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\message_filters\;CMake Files\..\..\..\..\opt\ros\noetic\share\message_filters\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\sensor_msgs\;CMake Files\..\..\..\..\opt\ros\noetic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2_ros\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2_ros\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\actionlib\;CMake Files\..\..\..\..\opt\ros\noetic\share\actionlib\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\actionlib_msgs\;CMake Files\..\..\..\..\opt\ros\noetic\share\actionlib_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\genmsg\;CMake Files\..\..\..\..\opt\ros\noetic\share\genmsg\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\gencpp\;CMake Files\..\..\..\..\opt\ros\noetic\share\gencpp\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\geneus\;CMake Files\..\..\..\..\opt\ros\noetic\share\geneus\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\genlisp\;CMake Files\..\..\..\..\opt\ros\noetic\share\genlisp\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\gennodejs\;CMake Files\..\..\..\..\opt\ros\noetic\share\gennodejs\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\genpy\;CMake Files\..\..\..\..\opt\ros\noetic\share\genpy\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\rosgraph\;CMake Files\..\..\..\..\opt\ros\noetic\share\rosgraph\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2_msgs\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\message_generation\;CMake Files\..\..\..\..\opt\ros\noetic\share\message_generation\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2_py\;CMake Files\..\..\..\..\opt\ros\noetic\share\tf2_py\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\roslaunch\;CMake Files\..\..\..\..\opt\ros\noetic\share\roslaunch\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\roslib\;CMake Files\..\..\..\..\opt\ros\noetic\share\roslib\cmake\;CMake Files\..\..\..\..\opt\ros\noetic\share\rospack\;CMake Files\..\..\..\..\opt\ros\noetic\share\rospack\cmake\;CMake Files\..\..\workspace\;CMake Files\..\..\workspace\devel\;CMake Files\..\..\workspace\devel\share\;CMake Files\..\..\workspace\devel\share\aerialcore_msgs\;CMake Files\..\..\workspace\devel\share\aerialcore_msgs\cmake\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\catkin\;CMake Files\cmake-build-debug\catkin\catkin_generated\;CMake Files\cmake-build-debug\catkin\catkin_generated\version\;CMake Files\cmake-build-debug\catkin_generated\;CMake Files\cmake-build-debug\catkin_generated\installspace\;CMake Files\cmake-build-debug\devel\;CMake Files\cmake-build-debug\devel\share\;CMake Files\cmake-build-debug\devel\share\ms_tsp_planner\;CMake Files\cmake-build-debug\devel\share\ms_tsp_planner\cmake\;CMake Files\cmake-build-debug\cmake\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug"/>
@@ -42,68 +42,6 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="mstsp">
-				<Option output="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/devel/lib/ms_tsp_planner/mstsp" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/devel/lib/ms_tsp_planner"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;ms_tsp_planner&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/devel/include"/>
-					<Add directory="/home/nekovfra/git/ms_tsp_planner/PUBLIC"/>
-					<Add directory="/home/nekovfra/git/ms_tsp_planner/include"/>
-					<Add directory="/opt/ros/noetic/include"/>
-					<Add directory="/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 mstsp"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="mstsp/fast">
-				<Option output="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/devel/lib/ms_tsp_planner/mstsp" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/devel/lib/ms_tsp_planner"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;ms_tsp_planner&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/devel/include"/>
-					<Add directory="/home/nekovfra/git/ms_tsp_planner/PUBLIC"/>
-					<Add directory="/home/nekovfra/git/ms_tsp_planner/include"/>
-					<Add directory="/opt/ros/noetic/include"/>
-					<Add directory="/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 mstsp/fast"/>
 					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -159,6 +97,26 @@
 					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="ms_tsp_planner_generate_messages_cpp">
+				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 ms_tsp_planner_generate_messages_cpp"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_ms_tsp_planner_generate_messages_check_deps_ConfigToFlightPlans">
+				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 _ms_tsp_planner_generate_messages_check_deps_ConfigToFlightPlans"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="ms_tsp_planner_gencpp">
 				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug"/>
 				<Option type="4"/>
@@ -169,11 +127,105 @@
 					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="ms_tsp_planner_generate_messages_cpp">
+			<Target title="aerialcore_msgs_generate_messages_py">
 				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 ms_tsp_planner_generate_messages_cpp"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 aerialcore_msgs_generate_messages_py"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mstsp">
+				<Option output="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/devel/lib/ms_tsp_planner/mstsp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/devel/lib/ms_tsp_planner"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;ms_tsp_planner&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/devel/include"/>
+					<Add directory="/home/nekovfra/git/ms_tsp_planner/PUBLIC"/>
+					<Add directory="/home/nekovfra/git/ms_tsp_planner/include"/>
+					<Add directory="/home/nekovfra/workspace/devel/.private/aerialcore_msgs/include"/>
+					<Add directory="/opt/ros/noetic/include"/>
+					<Add directory="/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 mstsp"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mstsp/fast">
+				<Option output="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/devel/lib/ms_tsp_planner/mstsp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/devel/lib/ms_tsp_planner"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;ms_tsp_planner&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/devel/include"/>
+					<Add directory="/home/nekovfra/git/ms_tsp_planner/PUBLIC"/>
+					<Add directory="/home/nekovfra/git/ms_tsp_planner/include"/>
+					<Add directory="/home/nekovfra/workspace/devel/.private/aerialcore_msgs/include"/>
+					<Add directory="/opt/ros/noetic/include"/>
+					<Add directory="/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 mstsp/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="aerialcore_msgs_generate_messages_eus">
+				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 aerialcore_msgs_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="aerialcore_msgs_generate_messages_lisp">
+				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 aerialcore_msgs_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="aerialcore_msgs_generate_messages_cpp">
+				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 aerialcore_msgs_generate_messages_cpp"/>
 					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -394,6 +446,16 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="aerialcore_msgs_generate_messages_nodejs">
+				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 aerialcore_msgs_generate_messages_nodejs"/>
 					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j16 -f &quot;/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1512,6 +1574,18 @@
 		</Unit>
 		<Unit filename="/home/nekovfra/git/ms_tsp_planner/../../../../opt/ros/noetic/share/rospack/cmake/rospackConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\noetic\share\rospack\cmake\"/>
+		</Unit>
+		<Unit filename="/home/nekovfra/git/ms_tsp_planner/../../workspace/devel/share/aerialcore_msgs/cmake/aerialcore_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\workspace\devel\share\aerialcore_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/nekovfra/git/ms_tsp_planner/../../workspace/devel/share/aerialcore_msgs/cmake/aerialcore_msgs-msg-paths.cmake">
+			<Option virtualFolder="CMake Files\..\..\workspace\devel\share\aerialcore_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/nekovfra/git/ms_tsp_planner/../../workspace/devel/share/aerialcore_msgs/cmake/aerialcore_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\workspace\devel\share\aerialcore_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/nekovfra/git/ms_tsp_planner/../../workspace/devel/share/aerialcore_msgs/cmake/aerialcore_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\workspace\devel\share\aerialcore_msgs\cmake\"/>
 		</Unit>
 		<Unit filename="/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/catkin/catkin_generated/version/package.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\catkin\catkin_generated\version\"/>

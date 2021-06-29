@@ -15,7 +15,7 @@
 #include <ros/builtin_message_traits.h>
 #include <ros/message_operations.h>
 
-#include <geometry_msgs/Pose2D.h>
+#include <geometry_msgs/PoseStamped.h>
 
 namespace ms_tsp_planner
 {
@@ -39,7 +39,7 @@ struct PlanDefaultResponse_
    typedef std::vector<int32_t, typename ContainerAllocator::template rebind<int32_t>::other >  _lengths_type;
   _lengths_type lengths;
 
-   typedef std::vector< ::geometry_msgs::Pose2D_<ContainerAllocator> , typename ContainerAllocator::template rebind< ::geometry_msgs::Pose2D_<ContainerAllocator> >::other >  _poses_type;
+   typedef std::vector< ::geometry_msgs::PoseStamped_<ContainerAllocator> , typename ContainerAllocator::template rebind< ::geometry_msgs::PoseStamped_<ContainerAllocator> >::other >  _poses_type;
   _poses_type poses;
 
 
@@ -129,12 +129,12 @@ struct MD5Sum< ::ms_tsp_planner::PlanDefaultResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "8fd8d366f5e0fc04b9702605ba43cc16";
+    return "fa70737d1b40485c543d6fa067d9f234";
   }
 
   static const char* value(const ::ms_tsp_planner::PlanDefaultResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x8fd8d366f5e0fc04ULL;
-  static const uint64_t static_value2 = 0xb9702605ba43cc16ULL;
+  static const uint64_t static_value1 = 0xfa70737d1b40485cULL;
+  static const uint64_t static_value2 = 0x543d6fa067d9f234ULL;
 };
 
 template<class ContainerAllocator>
@@ -154,24 +154,52 @@ struct Definition< ::ms_tsp_planner::PlanDefaultResponse_<ContainerAllocator> >
   static const char* value()
   {
     return "int32[] lengths\n"
-"geometry_msgs/Pose2D[] poses\n"
+"geometry_msgs/PoseStamped[] poses\n"
 "\n"
 "\n"
 "================================================================================\n"
-"MSG: geometry_msgs/Pose2D\n"
-"# Deprecated\n"
-"# Please use the full 3D pose.\n"
+"MSG: geometry_msgs/PoseStamped\n"
+"# A Pose with reference coordinate frame and timestamp\n"
+"Header header\n"
+"Pose pose\n"
 "\n"
-"# In general our recommendation is to use a full 3D representation of everything and for 2D specific applications make the appropriate projections into the plane for their calculations but optimally will preserve the 3D information during processing.\n"
+"================================================================================\n"
+"MSG: std_msgs/Header\n"
+"# Standard metadata for higher-level stamped data types.\n"
+"# This is generally used to communicate timestamped data \n"
+"# in a particular coordinate frame.\n"
+"# \n"
+"# sequence ID: consecutively increasing ID \n"
+"uint32 seq\n"
+"#Two-integer timestamp that is expressed as:\n"
+"# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')\n"
+"# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')\n"
+"# time-handling sugar is provided by the client library\n"
+"time stamp\n"
+"#Frame this data is associated with\n"
+"string frame_id\n"
 "\n"
-"# If we have parallel copies of 2D datatypes every UI and other pipeline will end up needing to have dual interfaces to plot everything. And you will end up with not being able to use 3D tools for 2D use cases even if they're completely valid, as you'd have to reimplement it with different inputs and outputs. It's not particularly hard to plot the 2D pose or compute the yaw error for the Pose message and there are already tools and libraries that can do this for you.\n"
+"================================================================================\n"
+"MSG: geometry_msgs/Pose\n"
+"# A representation of pose in free space, composed of position and orientation. \n"
+"Point position\n"
+"Quaternion orientation\n"
 "\n"
+"================================================================================\n"
+"MSG: geometry_msgs/Point\n"
+"# This contains the position of a point in free space\n"
+"float64 x\n"
+"float64 y\n"
+"float64 z\n"
 "\n"
-"# This expresses a position and orientation on a 2D manifold.\n"
+"================================================================================\n"
+"MSG: geometry_msgs/Quaternion\n"
+"# This represents an orientation in free space in quaternion form.\n"
 "\n"
 "float64 x\n"
 "float64 y\n"
-"float64 theta\n"
+"float64 z\n"
+"float64 w\n"
 ;
   }
 
@@ -222,7 +250,7 @@ struct Printer< ::ms_tsp_planner::PlanDefaultResponse_<ContainerAllocator> >
       s << indent << "  poses[" << i << "]: ";
       s << std::endl;
       s << indent;
-      Printer< ::geometry_msgs::Pose2D_<ContainerAllocator> >::stream(s, indent + "    ", v.poses[i]);
+      Printer< ::geometry_msgs::PoseStamped_<ContainerAllocator> >::stream(s, indent + "    ", v.poses[i]);
     }
   }
 };
