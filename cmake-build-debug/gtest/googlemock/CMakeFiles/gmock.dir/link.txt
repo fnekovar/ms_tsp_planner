@@ -1,1 +1,1 @@
-/usr/bin/c++ -fPIC  -std=c++17 -DIL_STD -m64 -Werror -g -O0 -ggdb -shared -Wl,-soname,libgmockd.so -o ../../lib/libgmockd.so CMakeFiles/gmock.dir/src/gmock-all.cc.o  -Wl,-rpath,/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/lib ../../lib/libgtestd.so -lpthread 
+/usr/bin/c++ -fPIC  -std=c++17 -DIL_STD -m64 -Werror -g -O0 -ggdb -shared -Wl,-soname,libgmockd.so -o ../lib/libgmockd.so CMakeFiles/gmock.dir/src/gmock-all.cc.o  -Wl,-rpath,/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/gtest/lib ../lib/libgtestd.so -lpthread 

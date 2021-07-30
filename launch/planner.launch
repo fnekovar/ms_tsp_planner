@@ -1,0 +1,4 @@
+<launch>
+    <node name="ms_tsp_planner" pkg="ms_tsp_planner" type="mstsp" output="screen">
+    </node>
+</launch>

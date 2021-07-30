@@ -18,7 +18,7 @@
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="/home/nekovfra/git/ms_tsp_planner/cmake-build-release/lib/libgtest.so" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/nekovfra/git/ms_tsp_planner/cmake-build-release/gtest/lib/libgtest.so" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-release/gtest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="3"/>
@@ -43,7 +43,7 @@
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="/home/nekovfra/git/ms_tsp_planner/cmake-build-release/lib/libgtest.so" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/nekovfra/git/ms_tsp_planner/cmake-build-release/gtest/lib/libgtest.so" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-release/gtest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="3"/>
@@ -68,7 +68,7 @@
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="/home/nekovfra/git/ms_tsp_planner/cmake-build-release/lib/libgtest_main.so" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/nekovfra/git/ms_tsp_planner/cmake-build-release/gtest/lib/libgtest_main.so" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-release/gtest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="3"/>
@@ -93,7 +93,7 @@
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="/home/nekovfra/git/ms_tsp_planner/cmake-build-release/lib/libgtest_main.so" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/nekovfra/git/ms_tsp_planner/cmake-build-release/gtest/lib/libgtest_main.so" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/nekovfra/git/ms_tsp_planner/cmake-build-release/gtest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="3"/>
