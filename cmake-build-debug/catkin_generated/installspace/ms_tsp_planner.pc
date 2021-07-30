@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: ms_tsp_planner
-Description: Description of ms_tsp_planner
-Version: 1.0.0
-Cflags: -I${prefix}/include -I/usr/include/eigen3
-Libs: -L${prefix}/lib 
-Requires: roscpp message_runtime roslib std_msgs geometry_msgs aerialcore_msgs

@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -std=c++17 -DIL_STD -m64 -Werror -g -O0 -ggdb -shared -Wl,-soname,libgmock_maind.so -o ../lib/libgmock_maind.so CMakeFiles/gmock_main.dir/src/gmock_main.cc.o  -Wl,-rpath,/home/nekovfra/git/ms_tsp_planner/cmake-build-debug/gtest/lib ../lib/libgmockd.so ../lib/libgtestd.so -lpthread 
